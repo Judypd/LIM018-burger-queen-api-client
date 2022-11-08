@@ -212,7 +212,7 @@
           "qty": 1
         }
       ],
-      "status": "delivering",
+      "status": "delivered",
       "dateEntry": "10/26/2022, 5:04:07 PM"
     },
     {
@@ -291,7 +291,7 @@
           "qty": 2
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "dateEntry": "10/26/2022, 5:53:46 PM"
     },
     {
@@ -310,7 +310,7 @@
           "qty": 1
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "dateEntry": "10/26/2022, 5:56:06 PM"
     },
     {
@@ -440,6 +440,25 @@
       ],
       "status": "pending",
       "dateEntry": "10/28/2022, 4:46:39 PM"
+    },
+    {
+      "id": 18,
+      "userId": "001",
+      "client": "Vania",
+      "products": [
+        {
+          "name": "sandwich de Queso",
+          "price": 20,
+          "qty": 2
+        },
+        {
+          "name": "Cafe Americano",
+          "price": 5,
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "11/3/2022, 5:16:09 PM"
     }
   ]
 }
