@@ -2,6 +2,7 @@
   "users": [
     {
       "id": "001",
+      "name": "Katherine Quispe",
       "email": "a.mesero@burger.queen",
       "password": "123456",
       "roles": {
@@ -10,6 +11,7 @@
     },
     {
       "id": "002",
+      "name": "Carolina Palacios",
       "email": "a.cocinero@burger.queen",
       "password": "123456",
       "roles": {
@@ -18,18 +20,12 @@
     },
     {
       "id": "003",
+      "name": "Gaby Rojas",
       "email": "a.admin@burger.queen",
       "password": "123456",
       "roles": {
         "admin": true
       }
-    },
-    {
-      "name": "Gaby",
-      "email": "mesero1@gmail.com",
-      "password": "123456",
-      "rol": "Cheff",
-      "id": "CVlLB4L"
     }
   ],
   "products": [
@@ -250,7 +246,7 @@
           "qty": 1
         }
       ],
-      "status": "delivering",
+      "status": "pending",
       "dateEntry": "10/26/2022, 5:25:16 PM"
     },
     {
@@ -258,7 +254,7 @@
       "userId": "1",
       "client": "Kam",
       "products": [],
-      "status": "delivering",
+      "status": "pending",
       "dateEntry": "10/26/2022, 5:25:30 PM"
     },
     {
@@ -277,7 +273,7 @@
           "qty": 1
         }
       ],
-      "status": "delivering",
+      "status": "pending",
       "dateEntry": "10/26/2022, 5:49:57 PM"
     },
     {
@@ -348,7 +344,7 @@
           "qty": 1
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "dateEntry": "10/26/2022, 7:08:24 PM"
     },
     {
@@ -367,7 +363,7 @@
           "qty": 1
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "dateEntry": "10/26/2022, 7:13:10 PM"
     },
     {
@@ -386,7 +382,7 @@
           "qty": 1
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "dateEntry": "10/26/2022, 11:41:58 PM"
     },
     {
@@ -405,7 +401,7 @@
           "qty": 1
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "dateEntry": "10/26/2022, 11:58:54 PM"
     },
     {
@@ -419,13 +415,65 @@
           "qty": 1
         }
       ],
-      "status": "pending",
+      "status": "delivering",
       "dateEntry": "10/27/2022, 9:38:32 AM"
     },
     {
       "id": 17,
       "userId": "001",
-      "client": "yo",
+      "client": "Jhonday",
+      "products": [
+        {
+          "name": "Jugo Natural",
+          "price": 7,
+          "qty": 1
+        },
+        {
+          "name": "Hamburguesa Doble",
+          "price": 30,
+          "qty": 2
+        },
+        {
+          "name": "Papas Fritas",
+          "price": 5,
+          "qty": 1
+        }
+      ],
+      "status": "delivered",
+      "dateEntry": "11/2/2022, 9:07:55 PM"
+    },
+    {
+      "id": 18,
+      "userId": "001",
+      "client": " .",
+      "products": [
+        {
+          "name": "Cafe con Leche",
+          "price": 14,
+          "qty": 2
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "11/2/2022, 9:19:47 PM"
+    },
+    {
+      "id": 19,
+      "userId": "001",
+      "client": "  ",
+      "products": [
+        {
+          "name": "Jugo Natural",
+          "price": 7,
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "11/2/2022, 9:19:58 PM"
+    },
+    {
+      "id": 20,
+      "userId": "001",
+      "client": "KATHER",
       "products": [
         {
           "name": "Cafe Americano",
@@ -433,13 +481,13 @@
           "qty": 1
         },
         {
-          "name": "sandwich de Queso",
-          "price": 10,
+          "name": "Cafe con Leche",
+          "price": 7,
           "qty": 1
         }
       ],
       "status": "pending",
-      "dateEntry": "10/28/2022, 4:46:39 PM"
+      "dateEntry": "11/3/2022, 5:12:55 PM"
     }
   ]
 }

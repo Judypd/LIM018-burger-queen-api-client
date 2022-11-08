@@ -5,9 +5,11 @@ import managerImg from "../../Images/manager.png";
 import editImg from "../../Images/edit.png"
 import deleteImg from "../../Images/delete.png"
 import './Administrador.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ModalCreateUser } from "../../components/Modal/Modal"
 import { createUser } from "../../api_functions/postUser"
+import { getUsers } from '../../api_functions/getUsers';
+
 
 
 export const AdminViewUsers = () => {
@@ -22,6 +24,8 @@ export const AdminViewUsers = () => {
         rol : ""
     });
 
+    const [users, setUsers] = useState([]);
+
     const addUser = () => {
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
@@ -31,11 +35,17 @@ export const AdminViewUsers = () => {
         if(name === "" || email === "" || password === "" || rol === ""){
             alert("Complete todos los campos")
         } else {
-            createUser(data).then((res) => console.log(res))
+            createUser(data).then((res) => res)
             .catch((error) => console.log(error))
         }
     }
 
+
+    useEffect (()=> {
+        getUsers(setUsers)
+    }, [])
+
+    console.log(users, 'usuarios')
 
     return (
         <section className="waiter">
@@ -65,13 +75,15 @@ export const AdminViewUsers = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Pamela Rojas</td>
-                                <td>pamela@burgeer.queen</td>
-                                <td>Mesero</td>
+                            { users.map((user, i) => (
+                            <tr key={i} >
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td>{user.roles.admin === true ? "administrador": "personal" }</td>
                                 <td><img className='img' src={editImg} alt="edit"/></td>
                                 <td><img className='img' src={deleteImg} alt="delete"/></td>
                             </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>
@@ -102,11 +114,21 @@ export const AdminViewUsers = () => {
                     />  
 
                     <label> Rol </label>
-                    <input  type = "text"
+                    <select name="select"
+                    className="dataInput"
+                    id="rol"
+                    onChange= {(e) => setData({...data, rol: e.target.value})}
+                    >
+                        <option>Seleccionar</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Cheff">Cheff</option>
+                        <option value="Mesero">Mesero</option>
+                    </select>
+                    {/* <input  type = "text"
                         className="dataInput"
                         id="rol"
                         onChange = {(e) => setData({...data, rol: e.target.value})}
-                    />   
+                    />  */}  
 
                     <div className="center btn-regis-cancel">
                         <button className="btn-modal" type="submit" onClick = {() => {addUser()}} >Crear usuario</button>
