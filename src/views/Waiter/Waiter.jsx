@@ -156,7 +156,7 @@ export const WaiterView = () => {
                             setShow("show")
                             }} />
                     </nav>
-                    <div id= "containerMenu" className="container-card-menu mg-top">
+                    <div id= "containerMenu" className="container-card-menu">
                         <nav className={`nav-option-menu ${show}`}>
                             <MenuButton 
                             title='Hamburguesa'
@@ -191,32 +191,38 @@ export const WaiterView = () => {
                 </div>
                 <div className="container-menu">
                     <div className="nav-menu">
-                        <div>
+                        <div className="info-user-order">
                             <label htmlFor="client">Cliente</label>
                             <input type="text" value={client} className="client" onChange={(e)=>setClient(e.target.value)}/>
                         </div>
-                        <div>
+                        <div className="info-user-order">
                             <label htmlFor="table">Mesa</label>
-                            <input type="text" value={table} className="client" onChange={(e)=>setTable(e.target.value)}/>
+                            <select name="table" id="table" className="client" onChange={(e)=>setTable(e.target.value)}>
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                                <option value="five">5</option>
+                                <option value="six">6</option>
+                                <option value="seven">7</option>
+                                <option value="eigth">8</option>
+                                <option value="nine">9</option>
+                                <option value="ten">10</option>
+                            </select>
+                            {/* <input type="text" value={table} className="client" onChange={(e)=>setTable(e.target.value)}/> */}
                         </div>
                     </div>
                     <div className="container-orders mg-top">
-                            <table>
+                        <div className="overflow">
+                            <table id="container-table">
                                 <tbody>
                                     <tr>
                                         <th>ÍTEM</th>
-                                        <th></th>
-                                        <th></th>
                                         <th>CANT</th>
                                         <th>PRECIO</th>
                                         <th></th>
-                                        <th></th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        <div className="container-table">
-                            <table>
-                                <tbody>
+                                    </tr>                            
+                              
                                     {arrayOfOrder.map((order, i) => (
                                         <tr key={i}>
                                             <td>{order.name}</td>
@@ -231,6 +237,7 @@ export const WaiterView = () => {
                                 </tbody> 
                             </table>
                         </div>
+                      
                         <Modal/>
                         <div className="container-total-sell">
                             <div className="total-sell">

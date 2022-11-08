@@ -12,6 +12,8 @@
 }
 
 .content-waiter{
+    width: 97%;
+    height: 85vh;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -19,48 +21,47 @@
 }
 
 .container-menu{
-    width: 46%;
-    height: 100%;
-    display: grid;
+   margin: 20px;
 }
 
 .container-card-menu{
     background: linear-gradient(180deg, #5C3D2E 33.33%, rgba(18, 17, 17, 0.59) 100%);
-    width: 33.2rem;
-    height: 34rem;
+    width: 100%;
+    height: 75vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
+    overflow-y: scroll;
     
 }
 
 .nav-menu{
     background-color: var(--black);
     color: var(--white);
-    width: 100%;
     height: 70px;
     border-radius: 10px;
+    margin-block: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
+.info-user-order{
+    display: flex;
+    margin-inline: 7px;
+}
+
 .container-orders{
-    /* background: linear-gradient(180deg, rgba(224, 192, 151, 0.7) 2.61%, rgba(224, 192, 151, 0.8) 81.77%, #E0C097 100%);*/
-    width: 31rem; 
     background-color: var(--beige);
-    height: 34rem;
+    width: 100%;
+    height: 75vh;
     padding: 20px;
     border-radius: 5px;
     display: grid;
     align-items: center;
     align-content: space-between;
-}
-
-.mg-top{
-    margin-top: 1.87rem;
 }
 
 .total-sell{
@@ -88,12 +89,15 @@
 }
 
 .nav-option-menu{
-    gap: 1rem;
     display: none;
 }
 
 .show{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+    margin: 10px;
 }
 
 .header-order{
@@ -119,27 +123,32 @@
     height: 2rem;
 }
 
-.container-table{
-    overflow-y: scroll;
-    width: 100%;
-    max-height: 430px ;
-    padding: 15px;
-}
-
-table{
-    width: 100%;
+#container-table{
     text-align: left;
+    border-collapse: collapse;
 }
 
-tr{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#container-table td, #container-table th{
+    padding: 8px 5px;
     font-weight: 500;
-    font-size: 1.1rem;
+} 
+
+#container-table th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 800;
+    font-size: large;
 }
 
-/* Orders */
+#container-table td{
+    font-weight: 500;
+}
+
+.overflow{
+    width: 100%;
+    max-height: 100% ;
+    overflow-y: scroll;
+}
 
 .content-order{
     background: linear-gradient(180deg, rgba(224, 192, 151, 0.7) 2.61%, rgba(224, 192, 151, 0.8) 81.77%, #E0C097 100%);
@@ -149,7 +158,7 @@ tr{
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     border-radius: 10px;
     overflow-y: scroll;
 }

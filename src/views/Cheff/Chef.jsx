@@ -23,33 +23,33 @@ export const ChefView = () => {
     
     const filteredByStatus = orders.filter((item) => item.status === "pending");
 
-    let theTime = 0;
-    const createTimer = () => {
-        const t = document.getElementById("watch")
+    // let theTime = 0;
+    // const createTimer = () => {
+    //     const t = document.getElementById("watch")
                   
-            let minutes = Math.floor(theTime / 60);
-            let seconds = theTime - (minutes * 60);
-            /*Si los segundos son menores a 10
-            nos aseguramos que quede en formato 0:00*/
-            if (seconds < 10) {
-                seconds = '0' + seconds;
-            }
+    //         let minutes = Math.floor(theTime / 60);
+    //         let seconds = theTime - (minutes * 60);
+    //         /*Si los segundos son menores a 10
+    //         nos aseguramos que quede en formato 0:00*/
+    //         if (seconds < 10) {
+    //             seconds = '0' + seconds;
+    //         }
 
-        const textTimer = minutes + ':' + seconds;
-        t.innerHTML = textTimer;
-        theTime++;
+    //     const textTimer = minutes + ':' + seconds;
+    //     t.innerHTML = textTimer;
+    //     theTime++;
         
-        return t
-    }
+    //     return t
+    // }
     
-    // eslint-disable-next-line no-unused-vars
-    let timeInterval = 0;
-    const startCounter = () => {
-        timeInterval = setInterval(() => {
-            createTimer()
-        }, 600);
+    // // eslint-disable-next-line no-unused-vars
+    // let timeInterval = 0;
+    // const startCounter = () => {
+    //     timeInterval = setInterval(() => {
+    //         createTimer()
+    //     }, 600);
     
-    }
+    // }
 
     // const stopCounter = () => {
     //     clearInterval(timeInterval);
@@ -59,7 +59,7 @@ export const ChefView = () => {
         <section className="waiter">
             <Header log={chefImg} />
             <div className="content-order">
-                <div id="watch" onClick={()=>startCounter()}>0</div>
+            
                 {filteredByStatus.map((order,i) => (
                 <CardChef 
                 key={i} 
